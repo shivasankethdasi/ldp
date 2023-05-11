@@ -4,15 +4,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Singleton {
-    private static Singleton obj = null;
-    private Singleton() {}
-
-    public static Singleton getInstance() {
-        if(obj == null) {
-            obj = new Singleton();
-        }
-        return obj;
-    }
 
     private static class HashcodePrinter implements Runnable {
         private final int threadId;
